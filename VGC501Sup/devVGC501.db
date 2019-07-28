@@ -1,0 +1,97 @@
+#
+# Database for Inficon VGC50X controller. 
+#
+
+record(stringin, "$(P)$(R)AYT")
+{
+    field(DESC, "Type of the unit")
+    field(DTYP, "stream")
+    field(INP,  "@devVGC501.proto getAYT($(P)$(R)) $(PORT) $(A)")
+    field(PINI, "YES")
+}
+
+record(stringin, "$(P)$(R)UnitType")
+{
+    field(DESC, "Type of the unit")
+}
+
+record(stringin, "$(P)$(R)ModelNumber")
+{
+    field(DESC, "Model No. of the unit")
+}
+
+record(stringin, "$(P)$(R)SerialNumber")
+{
+    field(DESC, "Serial No. of the unit")
+}
+
+record(stringin, "$(P)$(R)FirmwareVersion")
+{
+    field(DESC, "Firmware version of the unit,")
+}
+
+record(stringin, "$(P)$(R)HardwareVersion")
+{
+    field(DESC, "Hardware version of the unit,")
+}
+
+record(stringin, "$(P)$(R)ETH")
+{
+    field(DESC, "Type of the unit")
+    field(DTYP, "stream")
+    field(INP,  "@devVGC501.proto getETH($(P)$(R)) $(PORT) $(A)")
+    field(PINI, "YES")
+}
+
+record(mbbi, "$(P)$(R)DHCP") {
+    field(DESC, "DHCP mode")
+    field(ZRST, "Static IP")
+    field(ONST, "Dynamic IP")
+}
+
+record(stringin, "$(P)$(R)IP")
+{
+    field(DESC, "IP address of the unit")
+}
+
+record(stringin, "$(P)$(R)Subnet")
+{
+    field(DESC, "Subnet mask")
+}
+
+record(stringin, "$(P)$(R)Gateway")
+{
+    field(DESC, "IP of the gateway")
+}
+
+record(stringin, "$(P)$(R)TID")
+{
+    field(DESC, "Identification gauge")
+    field(DTYP, "stream")
+    field(INP,  "@devVGC501.proto getTID($(P)$(R)) $(PORT) $(A)")
+    field(PINI, "YES")
+}
+
+# Continous stream
+record(bo, "$(P)$(R)StartRecord") {
+    field(DTYP, "stream")
+    field(OUT,  "@devVGC501.proto com($(P)$(R)) $(PORT) $(A)")
+}
+
+record (ai, "$(P)$(R)Vacuum") {
+  field (DTYP, "stream")
+  field (INP, "@devVGC501.proto read($(P)$(R)) $(PORT) $(A)")
+  field (SCAN, "I/O Intr")
+} 
+
+record(ao, "$(P)$(R)ScanTime") {
+    field(DESC, "Time interval to send")
+}
+
+record(mbbo, "$(P)$(R)ScanTimeEnum") {
+    field(DESC, "Time interval")
+    field(OUT,  "$(P)$(R)ScanTime PP")
+    field(ZRST, "100 ms")
+    field(ONST, "1 s")
+    field(TWST, "1 min")
+}

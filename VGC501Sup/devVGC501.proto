@@ -1,0 +1,57 @@
+Terminator = CR LF;
+
+getIDN {
+    out "*IDN?";
+    in "%\$1[^\r\n]";
+    ExtraInput = Ignore;
+}
+
+getAYT {
+    out "AYT";
+    in ACK;
+    out ENQ;
+    in "%(\$1UnitType)[^,\r\n],%(\$1ModelNumber)[^,\r\n],%(\$1SerialNumber)[^,\r\n],%(\$1FirmwareVersion)[^,\r\n],%(\$1HardwareVersion)[^,\r\n]";
+    ExtraInput = Ignore;
+    #in "%(\$1UnitType)s,%(\$1ModelNumber)s,%(\$1SerialNumber)s,%(\$1FirmwareVersion)s,%(\$1HardwareVersion)s";
+}
+
+getETH {
+    out "ETH";
+    in ACK;
+    out ENQ;
+    in "%(\$1DHCP)[^,\r\n],%(\$1IP)[^,\r\n],%(\$1Subnet)[^,\r\n],%(\$1Gateway)[^,\r\n]";
+    ExtraInput = Ignore;
+    #in "%(\$1UnitType)s,%(\$1ModelNumber)s,%(\$1SerialNumber)s,%(\$1FirmwareVersion)s,%(\$1HardwareVersion)s";
+}
+
+getTID {
+    out "TID";
+    in ACK;
+    out ENQ;
+    in "%(\$1GaugeTID1)[^,\r\n],%(\$1GaugeTID2)[^,\r\n],%(\$1GaugeTID3)[^,\r\n]";
+    ExtraInput = Ignore;
+    #in "%(\$1UnitType)s,%(\$1ModelNumber)s,%(\$1SerialNumber)s,%(\$1FirmwareVersion)s,%(\$1HardwareVersion)s";
+}
+
+com {
+  out "COM,%(\$1ScanTime)d";
+  in ACK;
+}
+
+read {
+  in "%(\$1StatusGauge1)d,%(\$1Vacuum1)e,%(\$1StatusGauge2)d,%(\$1Vacuum2)e,%(\$1StatusGauge3)d,%(\$1Vacuum3)e";
+}
+
+cmd {
+    out "\$1";
+}
+
+setD {
+    out "\$1 %d";
+}
+
+getD {
+    out "\$1?";
+    in "%d";
+    ExtraInput = Ignore;
+}

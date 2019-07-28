@@ -1,0 +1,15 @@
+*.o
+*.a
+*.so
+
+**/O.*
+
+bin/*
+lib/*
+include/*
+db/*
+dbd/*
+
+
+# Temp
+opi/boy/* 

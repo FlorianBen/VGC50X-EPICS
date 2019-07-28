@@ -1,0 +1,77 @@
+#
+# Database for one channel of the Inficon VGC50X controller.
+#
+
+record(ai, "$(P)$(R)Vacuum$(G)") {
+    field(DESC, "Vacuum level on gauge $(G)")
+}
+
+record(stringin, "$(P)$(R)GaugeTID$(G)")
+{
+    field(DESC, "GaugeType")
+}
+
+record(mbbi, "$(P)$(R)StatusGauge$(G)") {
+    field(DESC, "Time interval")
+    field(ZRST, "Data okay")
+    field(ONST, "Underrange")
+    field(TWST, "Overrange")
+    field(THST, "Measurement error")
+    field(FRST, "Sensor off")
+    field(FVST, "No sensor")
+    field(SXST, "Identification error")
+    field(SVST, "Error BPG, HPG, BCG")
+}
+
+record(ao, "$(P)$(R)HV$(G)") {
+    field(DESC, "HV to send")
+}
+
+record(mbbo, "$(P)$(R)HVEnum$(G)") {
+    field(DESC, "HV gauge $(G)")
+    field(OUT,  "$(P)$(R)HV PP")
+    field(ZRST, "Off")
+    field(ONST, "On")
+}
+
+record(ao, "$(P)$(R)GasType$(G)") {
+    field(DESC, "Gas type correction to send")
+}
+
+record(mbbo, "$(P)$(R)GaTypeEnum$(G)") {
+    field(DESC, "Gas type correction gauge $(G)")
+    field(OUT,  "$(P)$(R)GaType PP")
+    field(ZRST, "Nitrogen/Air")
+    field(ONST, "Argon")
+    field(TWST, "Hydrogen")
+    field(THST, "Helium")
+    field(FRST, "Neon")
+    field(FVST, "Krypton")
+    field(SXST, "Xenon")
+    field(SVST, "Other gases")
+}
+
+record(ao, "$(P)$(R)Filament$(G)") {
+    field(DESC, "Filament to send")
+}
+
+record(mbbo, "$(P)$(R)FilamentEnum$(G)") {
+    field(DESC, "Filament mode gauge $(G)")
+    field(OUT,  "$(P)$(R)Filament PP")
+    field(ZRST, "Automatic")
+    field(ONST, "Filament 1")
+    field(TWST, "Filament 2")
+}
+
+record(ao, "$(P)$(R)Filter$(G)") {
+    field(DESC, "Filter to send")
+}
+
+record(mbbo, "$(P)$(R)FilterEnum$(G)") {
+    field(DESC, "Filter gauge $(G)")
+    field(OUT,  "$(P)$(R)Filter PP")
+    field(ZRST, "Filter off")
+    field(ONST, "Fast")
+    field(TWST, "Normal")
+    field(THST, "Slow")
+}
