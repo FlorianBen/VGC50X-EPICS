@@ -1,15 +1,16 @@
-*.o
-*.a
-*.so
-
-**/O.*
-
+# Ignore EPICS build output
 bin/*
 lib/*
 include/*
 db/*
 dbd/*
+*.o
+*.a
+*.so
+**/O.*
 
+# Ignore CSS files
+.projet
 
 # Temp
 opi/boy/* 
