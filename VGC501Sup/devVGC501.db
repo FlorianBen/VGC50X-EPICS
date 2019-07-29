@@ -95,3 +95,79 @@ record(mbbo, "$(P)$(R)ScanTimeEnum") {
     field(ONST, "1 s")
     field(TWST, "1 min")
 }
+
+# Display control
+record(mbbo, "$(P)$(R)DCB") {
+    field(DESC, "Display control bar graph")
+    field(OUT,  "$(P)$(R)DCS PP")
+    field(ZRST, "Off")
+    field(ONST, "10 minutes")
+    field(TWST, "30 minutes")
+    field(THST, "1 hour")
+    field(FRST, "2 hours")
+    field(FVST, "8 hours")
+    field(SXST, "Backlight 1 minutes")
+    field(OUT, "@devVGC501.proto DCB($(P)$(R)) $(PORT) $(A)")
+}
+
+record(mbbi, "$(P)$(R)DCB_RBV") {
+    field(DESC, "Display control bar graph RBV")
+    field(ZRST, "Off")
+    field(ONST, "10 minutes")
+    field(TWST, "30 minutes")
+    field(THST, "1 hour")
+    field(FRST, "2 hours")
+    field(FVST, "8 hours")
+    field(SXST, "Backlight 1 minutes")
+    field(INP, "@devVGC501.proto getDCB() $(PORT) $(A)")
+    field(SCAN, "10 second")
+}
+
+record(ao, "$(P)$(R)BAL") {
+    field(DESC, "Backlight")
+    field(OUT, "@devVGC501.proto BAL($(P)$(R)) $(PORT) $(A)")
+}
+
+record(ai, "$(P)$(R)BAL_RBV") {
+    field(DESC, "Backlight RBV")
+    field(DTYP, "stream")
+    field(SCAN, "10 second")
+    field(INP, "@devVGC501.proto getBAL() $(PORT) $(A)")
+}
+
+record(ao, "$(P)$(R)DCC") {
+    field(DESC, "Display control contrast")
+    field(OUT, "@devVGC501.proto DCC($(P)$(R)) $(PORT) $(A)")
+}
+
+record(ai, "$(P)$(R)DCC_RBV") {
+    field(DESC, "Display control contrast RBV")
+    field(DTYP, "stream")
+    field(SCAN, "10 second")
+    field(INP, "@devVGC501.proto getDCC() $(PORT) $(A)")
+}
+
+record(mbbo, "$(P)$(R)DCS") {
+    field(DESC, "Display control screensaver")
+    field(ZRST, "Off")
+    field(ONST, "10 minutes")
+    field(TWST, "30 minutes")
+    field(THST, "1 hour")
+    field(FRST, "2 hours")
+    field(FVST, "8 hours")
+    field(SXST, "Backlight 1 minutes")
+    field(OUT, "@devVGC501.proto DCS($(P)$(R)) $(PORT) $(A)")
+}
+
+record(mbbi, "$(P)$(R)DCS_RBV") {
+    field(DESC, "Display control screensaver RBV")
+    field(ZRST, "Off")
+    field(ONST, "10 minutes")
+    field(TWST, "30 minutes")
+    field(THST, "1 hour")
+    field(FRST, "2 hours")
+    field(FVST, "8 hours")
+    field(SXST, "Backlight 1 minutes")
+    field(INP, "@devVGC501.proto getDCS() $(PORT) $(A)")
+    field(SCAN, "10 second")
+}

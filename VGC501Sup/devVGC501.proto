@@ -42,6 +42,73 @@ read {
   in "%(\$1StatusGauge1)d,%(\$1Vacuum1)e,%(\$1StatusGauge2)d,%(\$1Vacuum2)e,%(\$1StatusGauge3)d,%(\$1Vacuum3)e";
 }
 
+# Display
+DCB{
+  out "DCS,%u";
+  in ACK;
+  out ENQ;
+  in "%(\$1DCS_RBV)d";
+  ExtraInput = Ignore;  
+}
+
+getDCB{
+  out "DCS";
+  in ACK;
+  out ENQ;
+  in "%i";
+  ExtraInput = Ignore;  
+}
+
+DCC{
+  out "BAL,%u";
+  in ACK;
+  out ENQ;
+  in "%(\$1BAL_RBV)d";
+  ExtraInput = Ignore;  
+}
+
+getBAL{
+  out "BAL";
+  in ACK;
+  out ENQ;
+  in "%i";
+  ExtraInput = Ignore;  
+}
+
+BAL{
+  out "DCC,%u";
+  in ACK;
+  out ENQ;
+  in "%(\$1DCC_RBV)d";
+  ExtraInput = Ignore;  
+}
+
+getDCC{
+  out "DCC";
+  in ACK;
+  out ENQ;
+  in "%i";
+  ExtraInput = Ignore;  
+}
+
+DCS{
+  out "DCS,%u";
+  in ACK;
+  out ENQ;
+  in "%(\$1DCS_RBV)d";
+  ExtraInput = Ignore;  
+}
+
+getDCS{
+  out "DCS";
+  in ACK;
+  out ENQ;
+  in "%i";
+  ExtraInput = Ignore;  
+}
+
+# Utils command
+
 cmd {
     out "\$1";
 }
