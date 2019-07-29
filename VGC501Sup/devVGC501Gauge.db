@@ -4,7 +4,15 @@
 
 record(ai, "$(P)$(R)Vacuum$(G)") {
     field(DESC, "Vacuum level on gauge $(G)")
+    field(EGU, "mbar")
+    field(INP, "@devVGC501.proto getPRn($(P)$(R),$(G)) $(PORT) $(A)")
+    field(SCAN, "1 second")
 }
+
+#Continous
+#record(ai, "$(P)$(R)Vacuum$(G)") {
+#    field(DESC, "Vacuum level on gauge $(G)")
+#}
 
 record(stringin, "$(P)$(R)GaugeTID$(G)")
 {

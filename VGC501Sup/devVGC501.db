@@ -72,6 +72,12 @@ record(stringin, "$(P)$(R)TID")
     field(PINI, "YES")
 }
 
+# Read all gauge
+record(bo, "$(P)$(R)StartRecord") {
+    field(DTYP, "stream")
+    field(OUT,  "@devVGC501.proto getPR($(P)$(R)) $(PORT) $(A)")
+}
+
 # Continous stream
 record(bo, "$(P)$(R)StartRecord") {
     field(DTYP, "stream")

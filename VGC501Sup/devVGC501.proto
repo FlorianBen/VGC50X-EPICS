@@ -30,7 +30,22 @@ getTID {
     out ENQ;
     in "%(\$1GaugeTID1)[^,\r\n],%(\$1GaugeTID2)[^,\r\n],%(\$1GaugeTID3)[^,\r\n]";
     ExtraInput = Ignore;
-    #in "%(\$1UnitType)s,%(\$1ModelNumber)s,%(\$1SerialNumber)s,%(\$1FirmwareVersion)s,%(\$1HardwareVersion)s";
+}
+
+getPR {
+    out "PRX";
+    in ACK;
+    out ENQ;
+    in "%(\$1StatusGauge1)d,%(\$1Vacuum1)e,%(\$1StatusGauge2)d,%(\$1Vacuum2)e,%(\$1StatusGauge3)d,%(\$1Vacuum3)e";
+    ExtraInput = Ignore;
+}
+
+getPRn {
+    out "PR\$2";
+    in ACK;
+    out ENQ;
+    in "%(\$1StatusGauge1)d,%(\$1Vacuum\$2)e";
+    ExtraInput = Ignore;
 }
 
 com {

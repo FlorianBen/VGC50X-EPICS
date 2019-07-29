@@ -4,12 +4,12 @@ An EPICS soft support for the Inficon VGC50X gauge controller based on StreamDev
 
 ## Features
 
-- [ ] Basic data retrieval:
+- [x] Basic data retrieval:
   - [x] Module information
   - [x] Network information
   - [x] Gauge information
   - [x] Continous streamed acquisition
-  - [ ] EPICS controlled acquisition
+  - [x] EPICS controlled acquisition
 - [ ] Gauge configuration
 - [ ] Controller configuration
   - [x] Display configuration
