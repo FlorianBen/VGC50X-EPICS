@@ -5,7 +5,6 @@
 record(ai, "$(P)$(R)Vacuum$(G)") {
     field(DESC, "Vacuum level on gauge $(G)")
     field(DTYP, "stream")
-    field(EGU, "mbar")
     field(INP, "@devVGC501.proto getPRn($(P)$(R),$(G)) $(PORT) $(A)")
     field(SCAN, "1 second")
 }

@@ -42,7 +42,7 @@ getPRn {
     out "PR\$2";
     in ACK;
     out ENQ;
-    in "%(\$1StatusGauge1)d,%(\$1Vacuum\$2)e";
+    in "%(\$1StatusGauge1)d,%E";
     ExtraInput = Ignore;
 }
 
