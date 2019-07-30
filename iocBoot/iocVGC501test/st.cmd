@@ -32,7 +32,5 @@ dbLoadRecords("db/devVGC501Gauge.db","P=$(P),R=$(R),G=3,PORT=L0,A=0")
 cd "${TOP}/iocBoot/${IOC}"
 iocInit
 
-dbpf("$(P)$(R)ScanTimeEnum","1")
-
 ## Start any sequence programs
 #seq sncxxx,"user=fbenedet"
