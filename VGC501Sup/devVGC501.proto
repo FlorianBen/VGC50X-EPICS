@@ -57,26 +57,19 @@ read {
 
 # Display
 DCB{
-  out "DCS,%u";
+  out "DCB,%(\$1DCB_Ch)u,%u";
   in ACK;
   out ENQ;
-  in "%(\$1DCS_RBV)d";
+  in "%(\$1DCB_Ch_RBV)u,%(\$1DCB_RBV)u";
   ExtraInput = Ignore;  
+  @init{out "DCB";in ACK;out ENQ;in "%(\$1DCB_Ch)u,%u";}    
 }
 
 getDCB{
-  out "DCS";
+  out "DCB";
   in ACK;
   out ENQ;
-  in "%i";
-  ExtraInput = Ignore;  
-}
-
-DCC{
-  out "BAL,%u";
-  in ACK;
-  out ENQ;
-  in "%(\$1BAL_RBV)d";
+  in "%(\$1DCB_Ch_RBV)u,%u";
   ExtraInput = Ignore;  
 }
 
@@ -84,20 +77,38 @@ getBAL{
   out "BAL";
   in ACK;
   out ENQ;
-  in "%i";
+  in "%u";
   ExtraInput = Ignore;  
 }
 
 BAL{
+  out "BAL,%u";
+  in ACK;
+  out ENQ;
+  in "%(\$1BAL_RBV)u";
+  ExtraInput = Ignore;  
+  @init{out "BAL";in ACK;out ENQ;in "%u";}  
+}
+
+getDCC{
+  out "DCC";
+  in ACK;
+  out ENQ;
+  in "%i";
+  ExtraInput = Ignore;  
+}
+
+DCC{
   out "DCC,%u";
   in ACK;
   out ENQ;
   in "%(\$1DCC_RBV)d";
   ExtraInput = Ignore;  
+  @init{out "DCC"; in ACK; out ENQ; in "%u";}
 }
 
-getDCC{
-  out "DCC";
+getDCS{
+  out "DCS";
   in ACK;
   out ENQ;
   in "%i";
@@ -110,13 +121,23 @@ DCS{
   out ENQ;
   in "%(\$1DCS_RBV)d";
   ExtraInput = Ignore;  
+  @init{out "DCS"; in ACK; out ENQ; in "%u";}
 }
 
-getDCS{
-  out "DCS";
+UNI {
+  out "UNI,%u";
   in ACK;
   out ENQ;
-  in "%i";
+  in "%(\$1PUnit_RBV)u";
+  ExtraInput = Ignore;
+  @init{out "UNI"; in ACK; out ENQ; in "%i";}
+}
+
+getUNI {
+    out "UNI";
+  in ACK;
+  out ENQ;
+    in "%u";
   ExtraInput = Ignore;  
 }
 
