@@ -4,6 +4,7 @@
 
 record(ai, "$(P)$(R)Vacuum$(G)") {
     field(DESC, "Vacuum level on gauge $(G)")
+    field(DTYP, "stream")
     field(EGU, "mbar")
     field(INP, "@devVGC501.proto getPRn($(P)$(R),$(G)) $(PORT) $(A)")
     field(SCAN, "1 second")
@@ -31,24 +32,20 @@ record(mbbi, "$(P)$(R)StatusGauge$(G)") {
     field(SVST, "Error BPG, HPG, BCG")
 }
 
-record(ao, "$(P)$(R)HV$(G)") {
-    field(DESC, "HV to send")
-}
-
-record(mbbo, "$(P)$(R)HVEnum$(G)") {
+record(mbbo, "$(P)$(R)HV$(G)") {
     field(DESC, "HV gauge $(G)")
-    field(OUT,  "$(P)$(R)HV PP")
     field(ZRST, "Off")
     field(ONST, "On")
 }
 
-record(ao, "$(P)$(R)GasType$(G)") {
-    field(DESC, "Gas type correction to send")
+record(mbbi, "$(P)$(R)HV$(G)_RBV") {
+    field(DESC, "HV to send")
+    field(ZRST, "Off")
+    field(ONST, "On")
 }
 
-record(mbbo, "$(P)$(R)GaTypeEnum$(G)") {
+record(mbbo, "$(P)$(R)GasType$(G)") {
     field(DESC, "Gas type correction gauge $(G)")
-    field(OUT,  "$(P)$(R)GaType PP")
     field(ZRST, "Nitrogen/Air")
     field(ONST, "Argon")
     field(TWST, "Hydrogen")
@@ -59,25 +56,42 @@ record(mbbo, "$(P)$(R)GaTypeEnum$(G)") {
     field(SVST, "Other gases")
 }
 
-record(ao, "$(P)$(R)Filament$(G)") {
-    field(DESC, "Filament to send")
+record(mbbi, "$(P)$(R)GasType$(G)_RBV") {
+    field(DESC, "Gas type correction to send")
+    field(ZRST, "Nitrogen/Air")
+    field(ONST, "Argon")
+    field(TWST, "Hydrogen")
+    field(THST, "Helium")
+    field(FRST, "Neon")
+    field(FVST, "Krypton")
+    field(SXST, "Xenon")
+    field(SVST, "Other gases")
 }
 
-record(mbbo, "$(P)$(R)FilamentEnum$(G)") {
+record(mbbo, "$(P)$(R)Filament$(G)") {
     field(DESC, "Filament mode gauge $(G)")
-    field(OUT,  "$(P)$(R)Filament PP")
     field(ZRST, "Automatic")
     field(ONST, "Filament 1")
     field(TWST, "Filament 2")
 }
 
-record(ao, "$(P)$(R)Filter$(G)") {
-    field(DESC, "Filter to send")
+record(mbbi, "$(P)$(R)Filament$(G)_RBV") {
+    field(DESC, "Filament to send")
+    field(ZRST, "Automatic")
+    field(ONST, "Filament 1")
+    field(TWST, "Filament 2")
 }
 
-record(mbbo, "$(P)$(R)FilterEnum$(G)") {
+record(mbbo, "$(P)$(R)Filter$(G)") {
     field(DESC, "Filter gauge $(G)")
-    field(OUT,  "$(P)$(R)Filter PP")
+    field(ZRST, "Filter off")
+    field(ONST, "Fast")
+    field(TWST, "Normal")
+    field(THST, "Slow")
+}
+
+record(mbbi, "$(P)$(R)Filter$(G)_RBV") {
+    field(DESC, "Filter to send")
     field(ZRST, "Filter off")
     field(ONST, "Fast")
     field(TWST, "Normal")
