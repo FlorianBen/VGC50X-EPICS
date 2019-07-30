@@ -96,7 +96,7 @@
     <height>39</height>
     <items_from_pv>true</items_from_pv>
     <name>Combo</name>
-    <pv_name>$(P)$(R)GasTypeEnum$(G)</pv_name>
+    <pv_name>$(P)$(R)GasType$(G)</pv_name>
     <pv_value />
     <rules />
     <scale_options>
@@ -178,7 +178,7 @@ $(pv_value)</tooltip>
     <height>39</height>
     <items_from_pv>true</items_from_pv>
     <name>Combo_1</name>
-    <pv_name>$(P)$(R)HVEnum$(G)</pv_name>
+    <pv_name>$(P)$(R)HV$(G)</pv_name>
     <pv_value />
     <rules />
     <scale_options>
@@ -370,7 +370,7 @@ $(pv_value)</tooltip>
     <height>39</height>
     <items_from_pv>true</items_from_pv>
     <name>Combo_2</name>
-    <pv_name>$(P)$(R)FilamentEnum$(G)</pv_name>
+    <pv_name>$(P)$(R)Filament$(G)</pv_name>
     <pv_value />
     <rules />
     <scale_options>
@@ -504,7 +504,7 @@ $(pv_value)</tooltip>
     <height>39</height>
     <items_from_pv>true</items_from_pv>
     <name>Combo_3</name>
-    <pv_name>$(P)$(R)FilterEnum$(G)</pv_name>
+    <pv_name>$(P)$(R)Filter$(G)</pv_name>
     <pv_value />
     <rules />
     <scale_options>
