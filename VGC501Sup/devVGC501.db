@@ -73,25 +73,34 @@ record(stringin, "$(P)$(R)TID")
 }
 
 # Read all gauge
-record(bo, "$(P)$(R)StartRecord") {
-    field(DTYP, "stream")
-    field(OUT,  "@devVGC501.proto getPR($(P)$(R)) $(PORT) $(A)")
-}
+#record(bo, "$(P)$(R)StartRecord") {
+#    field(DTYP, "stream")
+#    field(OUT,  "@devVGC501.proto getPR($(P)$(R)) $(PORT) $(A)")
+#}
 
 # Continous stream
-record(bo, "$(P)$(R)StartRecord") {
-    field(DTYP, "stream")
-    field(OUT,  "@devVGC501.proto com($(P)$(R)) $(PORT) $(A)")
-}
+#record(bo, "$(P)$(R)StartRecord") {
+#    field(DTYP, "stream")
+#    field(OUT,  "@devVGC501.proto com($(P)$(R)) $(PORT) $(A)")
+#}
 
-record (ai, "$(P)$(R)Vacuum") {
-  field (DTYP, "stream")
-  field (INP, "@devVGC501.proto read($(P)$(R)) $(PORT) $(A)")
-  field (SCAN, "I/O Intr")
-} 
+#record (ai, "$(P)$(R)Vacuum") {
+#  field (DTYP, "stream")
+#  field (INP, "@devVGC501.proto read($(P)$(R)) $(PORT) $(A)")
+#  field (SCAN, "I/O Intr")
+#} 
 
-record(ao, "$(P)$(R)ScanTime") {
-    field(DESC, "Time interval to send")
+# record(ao, "$(P)$(R)ScanTime") {
+#     field(DESC, "Time interval to send")
+# }
+
+# record(mbbo, "$(P)$(R)ScanTimeEnum") {
+#     field(DESC, "Time interval")
+#     field(OUT,  "$(P)$(R)ScanTime PP")
+#     field(ZRST, "100 ms")
+#     field(ONST, "1 s")
+#     field(TWST, "1 min")
+# }
 }
 
 record(mbbo, "$(P)$(R)ScanTimeEnum") {
