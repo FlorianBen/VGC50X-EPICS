@@ -10,7 +10,7 @@
   <background_color>
     <color red="240" green="240" blue="240" />
   </background_color>
-  <boy_version>5.1.0</boy_version>
+  <boy_version>5.1.0.201710241501</boy_version>
   <foreground_color>
     <color red="192" green="192" blue="192" />
   </foreground_color>
@@ -67,7 +67,7 @@
     </fill_color>
     <fillcolor_alarm_sensitive>false</fillcolor_alarm_sensitive>
     <font>
-      <opifont.name fontName="Source Sans Pro" height="16" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Ubuntu" height="11" style="0" pixels="false">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -92,7 +92,7 @@
     <pv_value />
     <rules />
     <scale_font>
-      <opifont.name fontName="Source Sans Pro" height="16" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Ubuntu" height="11" style="0" pixels="false">Default</opifont.name>
     </scale_font>
     <scale_format></scale_format>
     <scale_options>
@@ -136,13 +136,13 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Source Sans Pro" height="16" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Ubuntu" height="11" style="0" pixels="false">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
       <color red="0" green="0" blue="0" />
     </foreground_color>
-    <format_type>7</format_type>
+    <format_type>2</format_type>
     <height>20</height>
     <horizontal_alignment>0</horizontal_alignment>
     <name>Text Update</name>
@@ -185,7 +185,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Source Sans Pro" height="16" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Ubuntu" height="11" style="0" pixels="false">Default</opifont.name>
     </font>
     <foreground_color>
       <color red="0" green="0" blue="0" />
