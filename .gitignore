@@ -10,7 +10,7 @@ dbd/*
 **/O.*
 
 # Ignore CSS files
-.projet
+.project
 
 # Temp
 opi/boy/* 
