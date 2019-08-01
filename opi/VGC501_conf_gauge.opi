@@ -64,7 +64,7 @@
     <tooltip></tooltip>
     <transparent>true</transparent>
     <vertical_alignment>1</vertical_alignment>
-    <visible>true</visible>
+    <visible>false</visible>
     <widget_type>Label</widget_type>
     <width>77</width>
     <wrap_words>false</wrap_words>
@@ -107,7 +107,7 @@
     <scripts />
     <tooltip>$(pv_name)
 $(pv_value)</tooltip>
-    <visible>true</visible>
+    <visible>false</visible>
     <widget_type>Combo</widget_type>
     <width>121</width>
     <wuid>-3b681876:16be7f3670b:-7a33</wuid>
@@ -146,7 +146,7 @@ $(pv_value)</tooltip>
     <tooltip></tooltip>
     <transparent>true</transparent>
     <vertical_alignment>1</vertical_alignment>
-    <visible>true</visible>
+    <visible>false</visible>
     <widget_type>Label</widget_type>
     <width>25</width>
     <wrap_words>false</wrap_words>
@@ -189,7 +189,7 @@ $(pv_value)</tooltip>
     <scripts />
     <tooltip>$(pv_name)
 $(pv_value)</tooltip>
-    <visible>true</visible>
+    <visible>false</visible>
     <widget_type>Combo</widget_type>
     <width>121</width>
     <wuid>-3b681876:16be7f3670b:-7a31</wuid>
@@ -247,7 +247,7 @@ $(pv_value)</tooltip>
     <square_led>true</square_led>
     <tooltip>$(pv_name)
 $(pv_value)</tooltip>
-    <visible>true</visible>
+    <visible>false</visible>
     <widget_type>LED</widget_type>
     <width>100</width>
     <wuid>-3b681876:16be7f3670b:-7a30</wuid>
@@ -298,7 +298,7 @@ $(pv_value)</tooltip>
 $(pv_value)</tooltip>
     <transparent>false</transparent>
     <vertical_alignment>1</vertical_alignment>
-    <visible>true</visible>
+    <visible>false</visible>
     <widget_type>Text Update</widget_type>
     <width>99</width>
     <wrap_words>false</wrap_words>
@@ -338,7 +338,7 @@ $(pv_value)</tooltip>
     <tooltip></tooltip>
     <transparent>true</transparent>
     <vertical_alignment>1</vertical_alignment>
-    <visible>true</visible>
+    <visible>false</visible>
     <widget_type>Label</widget_type>
     <width>80</width>
     <wrap_words>false</wrap_words>
@@ -381,7 +381,7 @@ $(pv_value)</tooltip>
     <scripts />
     <tooltip>$(pv_name)
 $(pv_value)</tooltip>
-    <visible>true</visible>
+    <visible>false</visible>
     <widget_type>Combo</widget_type>
     <width>121</width>
     <wuid>-3b681876:16be7f3670b:-7a2d</wuid>
@@ -432,7 +432,7 @@ $(pv_value)</tooltip>
 $(pv_value)</tooltip>
     <transparent>false</transparent>
     <vertical_alignment>1</vertical_alignment>
-    <visible>true</visible>
+    <visible>false</visible>
     <widget_type>Text Update</widget_type>
     <width>99</width>
     <wrap_words>false</wrap_words>
@@ -472,7 +472,7 @@ $(pv_value)</tooltip>
     <tooltip></tooltip>
     <transparent>true</transparent>
     <vertical_alignment>1</vertical_alignment>
-    <visible>true</visible>
+    <visible>false</visible>
     <widget_type>Label</widget_type>
     <width>46</width>
     <wrap_words>false</wrap_words>
@@ -515,7 +515,7 @@ $(pv_value)</tooltip>
     <scripts />
     <tooltip>$(pv_name)
 $(pv_value)</tooltip>
-    <visible>true</visible>
+    <visible>false</visible>
     <widget_type>Combo</widget_type>
     <width>121</width>
     <wuid>-3b681876:16be7f3670b:-7a2a</wuid>
@@ -566,7 +566,7 @@ $(pv_value)</tooltip>
 $(pv_value)</tooltip>
     <transparent>false</transparent>
     <vertical_alignment>1</vertical_alignment>
-    <visible>true</visible>
+    <visible>false</visible>
     <widget_type>Text Update</widget_type>
     <width>99</width>
     <wrap_words>false</wrap_words>
