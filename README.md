@@ -15,6 +15,7 @@ An EPICS soft support for the Inficon VGC50X gauge controller based on StreamDev
 - [ ] Gauge configuration
   - No implemented, too related to gauge type
 - [ ] Advanced settings
+  - No implemented, testing settings may be dangerous to use during operation
 
 ## Prerequisites
 
@@ -25,5 +26,4 @@ An EPICS soft support for the Inficon VGC50X gauge controller based on StreamDev
 
 ## Configuration
 
-The RELEASE file must be edited according to your EPICS installation. As well, the StreamDevice module must be configured.
-
+The RELEASE file must be edited according to your EPICS installation. As well, the StreamDevice module must be configured correctly.
