@@ -3,98 +3,107 @@
 #
 
 record(ai, "$(P)$(R)Vacuum$(G)") {
-    field(DESC, "Vacuum level on gauge $(G)")
-    field(DTYP, "stream")
-    field (EGU, "mBar")
-    field (PREC, "2")
-    field(INP, "@devVGC501.proto getPRn($(P)$(R),$(G)) $(PORT) $(A)")
-    field(SCAN, "1 second")
+  field(DESC, "Vacuum level on gauge $(G)")
+  field(DTYP, "stream")
+  field (EGU, "mBar")
+  field (PREC, "2")
+  field(INP, "@devVGC501.proto getPRn($(P)$(R),$(G)) $(PORT) $(A)")
+  field(SCAN, "1 second")
 }
 
 #Continous
 #record(ai, "$(P)$(R)Vacuum$(G)") {
-#    field(DESC, "Vacuum level on gauge $(G)")
+#  field(DESC, "Vacuum level on gauge $(G)")
 #}
 
 record(stringin, "$(P)$(R)GaugeTID$(G)")
 {
-    field(DESC, "GaugeType")
+  field(DESC, "GaugeType")
 }
 
 record(mbbi, "$(P)$(R)StatusGauge$(G)") {
-    field(DESC, "Time interval")
-    field(ZRST, "Data okay")
-    field(ONST, "Underrange")
-    field(TWST, "Overrange")
-    field(THST, "Measurement error")
-    field(FRST, "Sensor off")
-    field(FVST, "No sensor")
-    field(SXST, "Identification error")
-    field(SVST, "Error BPG, HPG, BCG")
+  field(DESC, "Time interval")
+  field(ZRST, "Data okay")
+  field(ONST, "Underrange")
+  field(TWST, "Overrange")
+  field(THST, "Measurement error")
+  field(FRST, "Sensor off")
+  field(FVST, "No sensor")
+  field(SXST, "Identification error")
+  field(SVST, "Error BPG, HPG, BCG")
 }
 
 record(mbbo, "$(P)$(R)HV$(G)") {
-    field(DESC, "HV gauge $(G)")
-    field(ZRST, "Off")
-    field(ONST, "On")
+  field(DESC, "HV gauge $(G)")
+  field(ZRST, "Off")
+  field(ONST, "On")
 }
 
 record(mbbi, "$(P)$(R)HV$(G)_RBV") {
-    field(DESC, "HV to send")
-    field(ZRST, "Off")
-    field(ONST, "On")
+  field(DESC, "HV to send")
+  field(ZRST, "Off")
+  field(ONST, "On")
 }
 
 record(mbbo, "$(P)$(R)GasType$(G)") {
-    field(DESC, "Gas type correction gauge $(G)")
-    field(ZRST, "Nitrogen/Air")
-    field(ONST, "Argon")
-    field(TWST, "Hydrogen")
-    field(THST, "Helium")
-    field(FRST, "Neon")
-    field(FVST, "Krypton")
-    field(SXST, "Xenon")
-    field(SVST, "Other gases")
+  field(DESC, "Gas type correction gauge $(G)")
+  field(ZRST, "Nitrogen/Air")
+  field(ONST, "Argon")
+  field(TWST, "Hydrogen")
+  field(THST, "Helium")
+  field(FRST, "Neon")
+  field(FVST, "Krypton")
+  field(SXST, "Xenon")
+  field(SVST, "Other gases")
 }
 
 record(mbbi, "$(P)$(R)GasType$(G)_RBV") {
-    field(DESC, "Gas type correction to send")
-    field(ZRST, "Nitrogen/Air")
-    field(ONST, "Argon")
-    field(TWST, "Hydrogen")
-    field(THST, "Helium")
-    field(FRST, "Neon")
-    field(FVST, "Krypton")
-    field(SXST, "Xenon")
-    field(SVST, "Other gases")
+  field(DESC, "Gas type correction to send")
+  field(ZRST, "Nitrogen/Air")
+  field(ONST, "Argon")
+  field(TWST, "Hydrogen")
+  field(THST, "Helium")
+  field(FRST, "Neon")
+  field(FVST, "Krypton")
+  field(SXST, "Xenon")
+  field(SVST, "Other gases")
 }
 
 record(mbbo, "$(P)$(R)Filament$(G)") {
-    field(DESC, "Filament mode gauge $(G)")
-    field(ZRST, "Automatic")
-    field(ONST, "Filament 1")
-    field(TWST, "Filament 2")
+  field(DESC, "Filament mode gauge $(G)")
+  field(ZRST, "Automatic")
+  field(ONST, "Filament 1")
+  field(TWST, "Filament 2")
 }
 
 record(mbbi, "$(P)$(R)Filament$(G)_RBV") {
-    field(DESC, "Filament to send")
-    field(ZRST, "Automatic")
-    field(ONST, "Filament 1")
-    field(TWST, "Filament 2")
+  field(DESC, "Filament to send")
+  field(ZRST, "Automatic")
+  field(ONST, "Filament 1")
+  field(TWST, "Filament 2")
 }
 
 record(mbbo, "$(P)$(R)Filter$(G)") {
-    field(DESC, "Filter gauge $(G)")
-    field(ZRST, "Filter off")
-    field(ONST, "Fast")
-    field(TWST, "Normal")
-    field(THST, "Slow")
+  field(DESC, "Filter gauge $(G)")
+  field(ZRST, "Filter off")
+  field(ONST, "Fast")
+  field(TWST, "Normal")
+  field(THST, "Slow")
 }
 
 record(mbbi, "$(P)$(R)Filter$(G)_RBV") {
-    field(DESC, "Filter to send")
-    field(ZRST, "Filter off")
-    field(ONST, "Fast")
-    field(TWST, "Normal")
-    field(THST, "Slow")
+  field(DESC, "Filter to send")
+  field(ZRST, "Filter off")
+  field(ONST, "Fast")
+  field(TWST, "Normal")
+  field(THST, "Slow")
+}
+
+record(stringout, "$(P)$(R)PUnit_Temp$(G)")
+{
+  field(DESC, "Temp pressure unit")
+  field(OMSL, "closed_loop")
+  field(DOL,  "$(P)$(R)PUnit_RBV")
+  field(OUT,  "$(P)$(R)Vacuum$(G).EGU PP")
+  field(SCAN, "1 second")
 }

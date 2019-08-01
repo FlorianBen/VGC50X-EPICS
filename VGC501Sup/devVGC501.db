@@ -4,84 +4,84 @@
 
 record(stringin, "$(P)$(R)AYT")
 {
-    field(DESC, "Type of the unit")
-    field(DTYP, "stream")
-    field(INP,  "@devVGC501.proto getAYT($(P)$(R)) $(PORT) $(A)")
-    field(PINI, "YES")
+  field(DESC, "Type of the unit")
+  field(DTYP, "stream")
+  field(INP,  "@devVGC501.proto getAYT($(P)$(R)) $(PORT) $(A)")
+  field(PINI, "YES")
 }
 
 record(stringin, "$(P)$(R)UnitType")
 {
-    field(DESC, "Type of the unit")
+  field(DESC, "Type of the unit")
 }
 
 record(stringin, "$(P)$(R)ModelNumber")
 {
-    field(DESC, "Model No. of the unit")
+  field(DESC, "Model No. of the unit")
 }
 
 record(stringin, "$(P)$(R)SerialNumber")
 {
-    field(DESC, "Serial No. of the unit")
+  field(DESC, "Serial No. of the unit")
 }
 
 record(stringin, "$(P)$(R)FirmwareVersion")
 {
-    field(DESC, "Firmware version of the unit,")
+  field(DESC, "Firmware version of the unit,")
 }
 
 record(stringin, "$(P)$(R)HardwareVersion")
 {
-    field(DESC, "Hardware version of the unit,")
+  field(DESC, "Hardware version of the unit,")
 }
 
 record(stringin, "$(P)$(R)ETH")
 {
-    field(DESC, "Type of the unit")
-    field(DTYP, "stream")
-    field(INP,  "@devVGC501.proto getETH($(P)$(R)) $(PORT) $(A)")
-    field(PINI, "YES")
+  field(DESC, "Type of the unit")
+  field(DTYP, "stream")
+  field(INP,  "@devVGC501.proto getETH($(P)$(R)) $(PORT) $(A)")
+  field(PINI, "YES")
 }
 
 record(mbbi, "$(P)$(R)DHCP") {
-    field(DESC, "DHCP mode")
-    field(ZRST, "Static IP")
-    field(ONST, "Dynamic IP")
+  field(DESC, "DHCP mode")
+  field(ZRST, "Static IP")
+  field(ONST, "Dynamic IP")
 }
 
 record(stringin, "$(P)$(R)IP")
 {
-    field(DESC, "IP address of the unit")
+  field(DESC, "IP address of the unit")
 }
 
 record(stringin, "$(P)$(R)Subnet")
 {
-    field(DESC, "Subnet mask")
+  field(DESC, "Subnet mask")
 }
 
 record(stringin, "$(P)$(R)Gateway")
 {
-    field(DESC, "IP of the gateway")
+  field(DESC, "IP of the gateway")
 }
 
 record(stringin, "$(P)$(R)TID")
 {
-    field(DESC, "Identification gauge")
-    field(DTYP, "stream")
-    field(INP,  "@devVGC501.proto getTID($(P)$(R)) $(PORT) $(A)")
-    field(PINI, "YES")
+  field(DESC, "Identification gauge")
+  field(DTYP, "stream")
+  field(INP,  "@devVGC501.proto getTID($(P)$(R)) $(PORT) $(A)")
+  field(PINI, "YES")
 }
 
 # Read all gauge
 #record(bo, "$(P)$(R)StartRecord") {
-#    field(DTYP, "stream")
-#    field(OUT,  "@devVGC501.proto getPR($(P)$(R)) $(PORT) $(A)")
+#  field(DTYP, "stream")
+#  field(OUT,  "@devVGC501.proto getPR($(P)$(R)) $(PORT) $(A)")
 #}
 
 # Continous stream
 #record(bo, "$(P)$(R)StartRecord") {
-#    field(DTYP, "stream")
-#    field(OUT,  "@devVGC501.proto com($(P)$(R)) $(PORT) $(A)")
+#  field(DTYP, "stream")
+#  field(OUT,  "@devVGC501.proto com($(P)$(R)) $(PORT) $(A)")
 #}
 
 #record (ai, "$(P)$(R)Vacuum") {
@@ -91,150 +91,150 @@ record(stringin, "$(P)$(R)TID")
 #} 
 
 # record(ao, "$(P)$(R)ScanTime") {
-#     field(DESC, "Time interval to send")
+#   field(DESC, "Time interval to send")
 # }
 
 # record(mbbo, "$(P)$(R)ScanTimeEnum") {
-#     field(DESC, "Time interval")
-#     field(OUT,  "$(P)$(R)ScanTime PP")
-#     field(ZRST, "100 ms")
-#     field(ONST, "1 s")
-#     field(TWST, "1 min")
+#   field(DESC, "Time interval")
+#   field(OUT,  "$(P)$(R)ScanTime PP")
+#   field(ZRST, "100 ms")
+#   field(ONST, "1 s")
+#   field(TWST, "1 min")
 # }
 
 # Display control
 
 record(mbbo, "$(P)$(R)DCB_Ch") {
-    field(DESC, "Display control bar graph")
-    field(ZRST, "Channel 1")
-    field(ONST, "Channel 2")
-    field(TWST, "Channel 3")
+  field(DESC, "Display control bar graph")
+  field(ZRST, "Channel 1")
+  field(ONST, "Channel 2")
+  field(TWST, "Channel 3")
 }
 
 record(mbbi, "$(P)$(R)DCB_Ch_RBV") {
-    field(DESC, "Display control bar graph")
-    field(ZRST, "Channel 1")
-    field(ONST, "Channel 2")
-    field(TWST, "Channel 3")
+  field(DESC, "Display control bar graph")
+  field(ZRST, "Channel 1")
+  field(ONST, "Channel 2")
+  field(TWST, "Channel 3")
 }
 
 record(mbbo, "$(P)$(R)DCB") {
-    field(DESC, "Display control bar graph")
-    field(DTYP, "stream")
-    field(ZRST, "Off")
-    field(ONST, "Bar: FR")
-    field(TWST, "Bar: FR HL")
-    field(THST, "Bar: FR setpoint")
-    field(FRST, "Bar: DEC")
-    field(FVST, "Bar: DEC HL")
-    field(SXST, "Bar: DEC setpoint")
-    field(SVST, "Graph: 0.2 s/pixel")
-    field(EIST, "Graph: 1 s/pixel")
-    field(NIST, "Graph: 6 s/pixel")
-    field(TEST, "Graph: 1 min/pixel")
-    field(OUT, "@devVGC501.proto DCB($(P)$(R)) $(PORT) $(A)")
+  field(DESC, "Display control bar graph")
+  field(DTYP, "stream")
+  field(ZRST, "Off")
+  field(ONST, "Bar: FR")
+  field(TWST, "Bar: FR HL")
+  field(THST, "Bar: FR setpoint")
+  field(FRST, "Bar: DEC")
+  field(FVST, "Bar: DEC HL")
+  field(SXST, "Bar: DEC setpoint")
+  field(SVST, "Graph: 0.2 s/pixel")
+  field(EIST, "Graph: 1 s/pixel")
+  field(NIST, "Graph: 6 s/pixel")
+  field(TEST, "Graph: 1 min/pixel")
+  field(OUT, "@devVGC501.proto DCB($(P)$(R)) $(PORT) $(A)")
 }
 
 record(mbbi, "$(P)$(R)DCB_RBV") {
-    field(DESC, "Display control bar graph RBV")
-    field(DTYP, "stream")
-    field(ZRST, "Off")
-    field(ONST, "Bar: FR")
-    field(TWST, "Bar: FR HL")
-    field(THST, "Bar: FR setpoint")
-    field(FRST, "Bar: DEC")
-    field(FVST, "Bar: DEC HL")
-    field(SXST, "Bar: DEC setpoint")
-    field(SVST, "Graph: 0.2 s/pixel")
-    field(EIST, "Graph: 1 s/pixel")
-    field(NIST, "Graph: 6 s/pixel")
-    field(TEST, "Graph: 1 min/pixel")
-    field(INP, "@devVGC501.proto getDCB($(P)$(R)) $(PORT) $(A)")
-    field(SCAN, "5 second")
+  field(DESC, "Display control bar graph RBV")
+  field(DTYP, "stream")
+  field(ZRST, "Off")
+  field(ONST, "Bar: FR")
+  field(TWST, "Bar: FR HL")
+  field(THST, "Bar: FR setpoint")
+  field(FRST, "Bar: DEC")
+  field(FVST, "Bar: DEC HL")
+  field(SXST, "Bar: DEC setpoint")
+  field(SVST, "Graph: 0.2 s/pixel")
+  field(EIST, "Graph: 1 s/pixel")
+  field(NIST, "Graph: 6 s/pixel")
+  field(TEST, "Graph: 1 min/pixel")
+  field(INP, "@devVGC501.proto getDCB($(P)$(R)) $(PORT) $(A)")
+  field(SCAN, "5 second")
 }
 
 record(ao, "$(P)$(R)BAL") {
-    field(DESC, "Backlight")
-    field(DTYP, "stream")
-    field(DRVL, "0")
-    field(DRVH, "100")
-    field(OUT, "@devVGC501.proto BAL($(P)$(R)) $(PORT) $(A)")
+  field(DESC, "Backlight")
+  field(DTYP, "stream")
+  field(DRVL, "0")
+  field(DRVH, "100")
+  field(OUT, "@devVGC501.proto BAL($(P)$(R)) $(PORT) $(A)")
 }
 
 record(ai, "$(P)$(R)BAL_RBV") {
-    field(DESC, "Backlight RBV")
-    field(DTYP, "stream")
-    field(SCAN, "5 second")
-    field(INP, "@devVGC501.proto getBAL() $(PORT) $(A)")
+  field(DESC, "Backlight RBV")
+  field(DTYP, "stream")
+  field(SCAN, "5 second")
+  field(INP, "@devVGC501.proto getBAL() $(PORT) $(A)")
 }
 
 record(ao, "$(P)$(R)DCC") {
-    field(DESC, "Display control contrast")
-    field(DTYP, "stream")
-    field(DRVL, "0")
-    field(DRVH, "100")
-    field(OUT, "@devVGC501.proto DCC($(P)$(R)) $(PORT) $(A)")
+  field(DESC, "Display control contrast")
+  field(DTYP, "stream")
+  field(DRVL, "0")
+  field(DRVH, "100")
+  field(OUT, "@devVGC501.proto DCC($(P)$(R)) $(PORT) $(A)")
 }
 
 record(ai, "$(P)$(R)DCC_RBV") {
-    field(DESC, "Display control contrast RBV")
-    field(DTYP, "stream")
-    field(SCAN, "5 second")
-    field(INP, "@devVGC501.proto getDCC() $(PORT) $(A)")
+  field(DESC, "Display control contrast RBV")
+  field(DTYP, "stream")
+  field(SCAN, "5 second")
+  field(INP, "@devVGC501.proto getDCC() $(PORT) $(A)")
 }
 
 record(mbbo, "$(P)$(R)DCS") {
-    field(DESC, "Display control screensaver")
-    field(DTYP, "stream")
-    field(ZRST, "Off")
-    field(ONST, "10 minutes")
-    field(TWST, "30 minutes")
-    field(THST, "1 hour")
-    field(FRST, "2 hours")
-    field(FVST, "8 hours")
-    field(SXST, "Backlight 1 minutes")
-    field(OUT, "@devVGC501.proto DCS($(P)$(R)) $(PORT) $(A)")
+  field(DESC, "Display control screensaver")
+  field(DTYP, "stream")
+  field(ZRST, "Off")
+  field(ONST, "10 minutes")
+  field(TWST, "30 minutes")
+  field(THST, "1 hour")
+  field(FRST, "2 hours")
+  field(FVST, "8 hours")
+  field(SXST, "Backlight 1 minutes")
+  field(OUT, "@devVGC501.proto DCS($(P)$(R)) $(PORT) $(A)")
 }
 
 record(mbbi, "$(P)$(R)DCS_RBV") {
-    field(DESC, "Display control screensaver RBV")
-    field(DTYP, "stream")
-    field(ZRST, "Off")
-    field(ONST, "10 minutes")
-    field(TWST, "30 minutes")
-    field(THST, "1 hour")
-    field(FRST, "2 hours")
-    field(FVST, "8 hours")
-    field(SXST, "Backlight 1 minutes")
-    field(INP, "@devVGC501.proto getDCS() $(PORT) $(A)")
-    field(SCAN, "5 second")
+  field(DESC, "Display control screensaver RBV")
+  field(DTYP, "stream")
+  field(ZRST, "Off")
+  field(ONST, "10 minutes")
+  field(TWST, "30 minutes")
+  field(THST, "1 hour")
+  field(FRST, "2 hours")
+  field(FVST, "8 hours")
+  field(SXST, "Backlight 1 minutes")
+  field(INP, "@devVGC501.proto getDCS() $(PORT) $(A)")
+  field(SCAN, "5 second")
 }
 
 record(mbbo, "$(P)$(R)PUnit")
 {
-    field(DESC, "Pressure unit")
-    field(DTYP, "stream")
-    field(OUT,  "@devVGC501.proto UNI($(P)$(R)) $(PORT) $(A)")
-    field(PINI, "YES")
-    field(ZRST, "mBar")
-    field(ONST, "Torr")
-    field(TWST, "Pa")
-    field(THST, "Micron")
-    field(FRST, "hPa")
-    field(FVST, "Volt")
+  field(DESC, "Pressure unit")
+  field(DTYP, "stream")
+  field(OUT,  "@devVGC501.proto UNI($(P)$(R)) $(PORT) $(A)")
+  field(PINI, "YES")
+  field(ZRST, "mBar")
+  field(ONST, "Torr")
+  field(TWST, "Pa")
+  field(THST, "Micron")
+  field(FRST, "hPa")
+  field(FVST, "Volt")
 }
 
 record(mbbi, "$(P)$(R)PUnit_RBV")
 {
-    field(DESC, "Pressure unit")
-    field(DTYP, "stream")
-    field(INP,  "@devVGC501.proto getUNI() $(PORT) $(A)")
-    field(PINI, "YES")
-    field(ZRST, "mBar")
-    field(ONST, "Torr")
-    field(TWST, "Pa")
-    field(THST, "Micron")
-    field(FRST, "hPa")
-    field(FVST, "Volt")
-    field(SCAN, "2 second")
+  field(DESC, "Pressure unit")
+  field(DTYP, "stream")
+  field(INP,  "@devVGC501.proto getUNI() $(PORT) $(A)")
+  field(PINI, "YES")
+  field(ZRST, "mBar")
+  field(ONST, "Torr")
+  field(TWST, "Pa")
+  field(THST, "Micron")
+  field(FRST, "hPa")
+  field(FVST, "Volt")
+  field(SCAN, "2 second")
 }
