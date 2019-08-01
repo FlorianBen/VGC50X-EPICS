@@ -10,18 +10,20 @@ An EPICS soft support for the Inficon VGC50X gauge controller based on StreamDev
   - [x] Gauge information
   - [x] Continous streamed acquisition
   - [x] EPICS controlled acquisition
-- [ ] Gauge configuration
-- [ ] Controller configuration
+- [x] Controller configuration
   - [x] Display configuration
+- [ ] Gauge configuration
+  - No implemented, too related to gauge type
 - [ ] Advanced settings
 
 ## Prerequisites
 
-- EPICS base
-- Asyn
+- EPICS base (tested with 7.0.2 and 3.15)
+- Asyn (tested with 4.31)
 - StreamDevice
 - Control System Studio or Phoebus for OPIs
 
 ## Configuration
 
-The RELEASE file must be edited according to your EPICS installation. As well, the StreamDevice module must be configured. 
+The RELEASE file must be edited according to your EPICS installation. As well, the StreamDevice module must be configured.
+
