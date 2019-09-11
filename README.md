@@ -1,6 +1,6 @@
 # Inficon VGC50X EPICS support
 
-An EPICS soft support for the Inficon VGC50X gauge controller based on StreamDevice. The softIOC has been tested with the VGC501 controller and a BPG400 gauge.
+An EPICS soft support for the Inficon VGC50X gauge controller based on StreamDevice (WIP).
 
 ## Features
 
