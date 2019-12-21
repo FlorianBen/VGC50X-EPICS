@@ -13,9 +13,9 @@ An EPICS soft support for the Inficon VGC50X gauge controller based on StreamDev
 - [x] Controller configuration
   - [x] Display configuration
 - [ ] Gauge configuration
-  - No implemented, too related to gauge type
+  - Not implemented, too related to the gauge type
 - [ ] Advanced settings
-  - No implemented, testing settings may be dangerous to use during operation
+  - Not implemented, testing settings may be dangerous to change during operation and no time to implement safety loops.
 
 ## Prerequisites
 
